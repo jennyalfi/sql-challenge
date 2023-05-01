@@ -1,10 +1,11 @@
 -- Drop table if exists
-DROP TABLE "departments" cascade;
-DROP TABLE "employees" cascade;
-DROP TABLE "dept_emp" cascade;
-DROP TABLE "dept_manager" cascade;
+
 DROP TABLE "salaries" cascade;
+DROP TABLE "dept_manager" cascade;
+DROP TABLE "dept_emp" cascade;
+DROP TABLE "employees" cascade;
 DROP TABLE "titles" cascade;
+DROP TABLE "departments" cascade;
 
 
 -- Create tables
@@ -33,7 +34,6 @@ CREATE TABLE "employees" (
     "last_name" varchar(30)   NOT NULL,
     "sex" varchar(10)   NOT NULL,
     "hire_date" date   NOT NULL,
-    "dept_emp" int   NOT NULL,
     CONSTRAINT "pk_employees" PRIMARY KEY (
         "emp_no"
      )
